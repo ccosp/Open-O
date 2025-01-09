@@ -993,7 +993,7 @@
         <dependency>
             <groupId>org.apache.cxf</groupId>
             <artifactId>cxf-rt-frontend-jaxws</artifactId>
-            <version>3.2.0</version>
+            <version>3.6.5</version>
             <exclusions>
                 <exclusion>
                     <groupId>org.codehaus.woodstox</groupId>
@@ -1429,14 +1429,11 @@
                                     <format property="build.dateTime.value" pattern="yyyy-MM-dd hh:mm aa"/>
                                 </tstamp>
                                 <echo message="build time : ${build.dateTime.value}"/>
-                                <replace file="target/classes/oscar_mcmaster.properties" token="${build.dateTime}"
-                                         value="${build.dateTime.value}"/>
+                                <replace file="target/classes/oscar_mcmaster.properties" token="${build.dateTime}" value="${build.dateTime.value}"/>
                                 <property environment="env"/>
                                 <echo message="JOB_NAME - BUILD_NUMBER : ${env.JOB_NAME}-${env.BUILD_NUMBER}"/>
-                                <replace file="target/classes/oscar_mcmaster.properties" token="${build.JOB_NAME}"
-                                         value="${env.JOB_NAME}"/>
-                                <replace file="target/classes/oscar_mcmaster.properties" token="${build.BUILD_NUMBER}"
-                                         value="${env.BUILD_NUMBER}"/>
+                                <replace file="target/classes/oscar_mcmaster.properties" token="${build.JOB_NAME}" value="${env.JOB_NAME}"/>
+                                <replace file="target/classes/oscar_mcmaster.properties" token="${build.BUILD_NUMBER}" value="${env.BUILD_NUMBER}"/>
                             </target>
                         </configuration>
                     </execution>
